@@ -1,1 +1,1 @@
-https://sociallz.vercel.app/admin/dashboard
+https://socialz.vercel.app/admin/dashboard
