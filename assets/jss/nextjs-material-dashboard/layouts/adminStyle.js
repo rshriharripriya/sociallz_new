@@ -6,7 +6,7 @@ import {
 
 const appStyle = (theme) => ({
   headBand: {
-    margin : "0 ! important",
+    // margin : "0 ! important",
     top : "0",
     right : "0",
     left: "auto",
