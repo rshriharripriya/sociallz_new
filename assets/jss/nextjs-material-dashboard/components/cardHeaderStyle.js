@@ -14,7 +14,7 @@ const cardHeaderStyle = {
     padding: "0.75rem 1.25rem",
     marginBottom: "0",
     borderBottom: "none",
-    backgroundColor : "rgba(18,22,38,0.32)",
+    backgroundColor : "gba(25, 27, 32, 1)",
     zIndex: "3 !important",
     "&$cardHeaderPlain,&$cardHeaderIcon,&$cardHeaderStats,&$warningCardHeader,&$successCardHeader,&$dangerCardHeader,&$infoCardHeader,&$primaryCardHeader,&$roseCardHeader,&$darkCardHeader": {
       margin: "0 15px",

@@ -63,21 +63,19 @@ const sidebarStyle = (theme) => ({
   // },
   logo: {
     position: "relative",
-    padding: "15px 15px",
-    marginTop: "35px",
+    paddingTop: "15px",
     zIndex: "4",
     "&:after": {
       content: '""',
       position: "absolute",
       bottom: "auto",
-
       height: "1px",
       right: "15px",
       width: "calc(100% - 30px)",
       // backgroundColor: "rgba(" + hexToRgb(grayColor[6]) + ", 0.3)",
     },
   },
-  logoLink: {
+  logoText: {
     ...defaultFont,
     textTransform: "uppercase",
     padding: "5px 0",
@@ -88,6 +86,7 @@ const sidebarStyle = (theme) => ({
     lineHeight: "30px",
     textDecoration: "none",
     backgroundColor: "transparent",
+    marginLeft:"5px",
     "&,&:hover": {
       color: whiteColor,
     },
@@ -96,15 +95,14 @@ const sidebarStyle = (theme) => ({
     textAlign: "right",
   },
   logoImage: {
-    marginTop: "35px",
     width: "30px",
     display: "inline-block",
     maxHeight: "30px",
     marginLeft: "10px",
-    marginRight: "15px",
+    paddingRight: "20px",
   },
   img: {
-    marginTop: "35px",
+
     width: "35px",
     top: "22px",
     position: "absolute",
@@ -117,7 +115,7 @@ const sidebarStyle = (theme) => ({
     height: "100%",
     width: "250px",
     display: "block",
-    top: "35",
+    top: "0",
     left: "0",
     backgroundColor: "black",
 
@@ -151,16 +149,14 @@ const sidebarStyle = (theme) => ({
       color: whiteColor,
     },
   },
-  itemLink: {
-    width: "auto",
-    transition: "all 300ms linear",
-    margin: "10px 15px 0",
-    borderRadius: "3px",
+  itemLText: {
+    // width: "auto",
+    // transition: "all 300ms linear",
+    marginLeft: "5px",
+
     position: "relative",
     display: "block",
-    padding: "10px 15px",
-    backgroundColor: "transparent",
-    ...defaultFont,
+    // padding: "10px 15px",
   },
   itemIcon: {
     width: "24px",
@@ -319,7 +315,7 @@ const sidebarStyle = (theme) => ({
     position: "block",
     height: "calc(100vh - 75px)",
     overflow: "auto",
-    width: "260px",
+    width: "250px",
     zIndex: "4",
     overflowScrolling: "touch",
   },

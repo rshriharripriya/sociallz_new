@@ -11,7 +11,7 @@ import Footer from "components/Footer/Footer.js";
 import Sidebar from "components/Sidebar/Sidebar.js";
 import GridItem from "components/Grid/GridItem.js";
 import GridContainer from "components/Grid/GridContainer.js";
-// import Rightbar from "components/Rightbar/Rightbar.js";
+import Rightbar from "components/Rightbar/Rightbar.js";
 // import FixedPlugin from "components/FixedPlugin/FixedPlugin.js";
 
 import routes from "routes.js";
@@ -19,11 +19,13 @@ import routes from "routes.js";
 import styles from "assets/jss/nextjs-material-dashboard/layouts/adminStyle.js";
 
 import bgImage from "assets/img/sidebar-2.jpg";
-import logo from "assets/img/reactlogo.png";
+// import logo from "assets/img/reactlogo.png";
+// import Rightbar from "../components/Rightbar/Rightbar";
 
 let ps;
 
 export default function Admin({ children, ...rest }) {
+    // const logo =
   // used for checking current route
   const router = useRouter();
   // styles
@@ -32,23 +34,10 @@ export default function Admin({ children, ...rest }) {
   // ref to help us initialize PerfectScrollbar on windows devices
   const mainPanel = React.createRef();
   // states and functions
-  const [image, setImage] = React.useState(bgImage);
-  const [color, setColor] = React.useState("white");
-  const [fixedClasses, setFixedClasses] = React.useState("dropdown show");
+  const [image] = React.useState(bgImage);
+
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const handleImageClick = (image) => {
-    setImage(image);
-  };
-  const handleColorClick = (color) => {
-    setColor(color);
-  };
-  const handleFixedClick = () => {
-    if (fixedClasses === "dropdown") {
-      setFixedClasses("dropdown show");
-    } else {
-      setFixedClasses("dropdown");
-    }
-  };
+
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
@@ -81,20 +70,21 @@ export default function Admin({ children, ...rest }) {
   return (
 
     <div className={classes.wrapper}>
-      <div className={classes.headBand}><b>lorem ipsum</b></div>
+      <div className={classes.headBand}><b>Lorem Ipsum is simply dummy text of the printing</b></div>
 
       <GridContainer>
          <GridItem xs={4} sm={4} md={2}>
            <Sidebar
         routes={routes}
         logoText={"Name"}
-        logo={logo}
+        // logo={logo}
         image={image}
         handleDrawerToggle={handleDrawerToggle}
         open={mobileOpen}
         color={"25282DA5"}
         {...rest}
       />
+
            </GridItem>
       <GridItem xs={12} sm={12}md={7}>
         <Navbar
@@ -113,14 +103,11 @@ export default function Admin({ children, ...rest }) {
           <div className={classes.map}>{children}</div>
         )}
 
-        {/*{getRoute() ? <Footer /> : null}*/}
-
-
       </div>
       </GridItem>
       <GridItem xs={12} sm={12} md={3}>
         <div className={classes.Panel} >
-                hi
+              <Rightbar/>
             </div>
        </GridItem>
      </GridContainer>
